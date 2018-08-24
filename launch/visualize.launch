@@ -1,0 +1,8 @@
+<launch>  
+  <arg name="command_args" value="$(find convert)/config/rvizconfig.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="command_args" output="screen" />
+
+  <node name="show_frames" pkg="convert" type="show_frames.py" output="screen" />
+  <node pkg="tf" type="static_transform_publisher" name="world" output="screen"
+    	args="0 0 0 0 0 0 world camera 10" />
+</launch>
