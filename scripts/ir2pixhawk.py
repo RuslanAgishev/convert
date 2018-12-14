@@ -10,7 +10,7 @@ import numpy as np
 
 
 data_to_publish = PoseStamped()
-pub = rospy.Publisher('/mavros/vision_pose/pose', PoseStamped, queue_size=10)
+pub = rospy.Publisher('/fused_data', PoseStamped, queue_size=10)
 
 def imucallback(imudata):
 	global roll
