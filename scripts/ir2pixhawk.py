@@ -39,7 +39,7 @@ def ircallback(irdata):
 	data_to_publish.pose.orientation.z = q[2]
 	data_to_publish.pose.orientation.w = q[3]
 	print data_to_publish
-	# pub.publish(data_to_publish)
+	pub.publish(data_to_publish)
 
 def sensors2pixhawk():
 	rospy.init_node('convert', anonymous=True)
